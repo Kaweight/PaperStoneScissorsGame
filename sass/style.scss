@@ -30,6 +30,12 @@ body {
             cursor: pointer;
             outline: none;
             transition: border-color .5s;
+            box-shadow: 0px 5px 0px #00823F;
+
+            &:active {
+                box-shadow: 0px 1px 0px #00823F;
+                bottom: -5px;
+            }
 
             .fas {
                 position: absolute;
@@ -41,12 +47,15 @@ body {
                 color: white;
                 padding: 10px;
                 border-radius: 18px;
-                transition: border-color .2s, color .2s, font-size .1s ease;
+                transition: border-color .2s, color .2s ease;
 
                 &:hover {
                     border-color: #f7d794;
                     color: #f7d794;
-                    font-size: 58px;
+                }
+
+                &:active {
+                    font-size: 50px;
                 }
             }
         }
