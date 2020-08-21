@@ -67,11 +67,11 @@ buttonScissors.addEventListener('click', function () {
 });
 
 function displayEndingMessage() {
-    if (gameSummary.playerWins >= 3) {
+    if (gameSummary.playerWins >= 10) {
         printMessageWin('WYGRAŁEŚ!');
         showResetButton();
         hangeDisplayText();
-    } else if (gameSummary.AiWins >= 3) {
+    } else if (gameSummary.AiWins >= 10) {
         printMessageWin('PRZEGRAŁEŚ..');
         showResetButton();
         hangeDisplayText();
