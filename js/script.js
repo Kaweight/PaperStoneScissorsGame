@@ -1,4 +1,8 @@
 var argButtonName, buttonPaper, buttonRock, buttonScissors, buttonTest;
+const gameSummary = {
+    playerWins: 0,
+    AiWins: 0
+}
 
 function buttonClicked(argButtonName) {
     clearMessages();
@@ -23,16 +27,20 @@ function buttonClicked(argButtonName) {
         console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
         if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
             printMessage('Wygrywasz!');
+            document.querySelector('p.playerGamesWin span').textContent = ++gameSummary.playerWins;
         } else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
             printMessage('Wygrywasz!');
+            document.querySelector('p.playerGamesWin span').textContent = ++gameSummary.playerWins;
         } else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier') {
             printMessage('Wygrywasz!');
+            document.querySelector('p.playerGamesWin span').textContent = ++gameSummary.playerWins;
         } else if (argPlayerMove == argComputerMove) {
             printMessage('Remis!');
         } else {
             printMessage('Przegrywasz :(');
+            document.querySelector('p.AiGamesWin span').textContent = ++gameSummary.AiWins;
         }
-        printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
+        printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove + '.');
     }
     playerMove = argButtonName;
     console.log('ruch gracza to: ' + playerMove);
