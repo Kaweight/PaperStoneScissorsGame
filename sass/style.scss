@@ -30,7 +30,7 @@ body {
             cursor: pointer;
             outline: none;
             transition: border-color .5s;
-            box-shadow: 0px 5px 0px #00823F;
+            box-shadow: 0 0 0 1px #00823F inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #00823F, 0 8px 8px 1px rgba(0, 0, 0, 0.5);
 
             &:active {
                 box-shadow: 0px 1px 0px #00823F;
@@ -93,31 +93,35 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 200px;
-    background-color: #3742fa;
-    border-radius: 15px;
+    background-color: #c0c0c0;
+    border-top-color: #fff;
+    border-left-color: #fff;
     animation: WinColors 3s step-start infinite;
 }
 
 @keyframes WinColors {
-    0% {
-        color: green;
-    }
-
     35% {
         color: red;
     }
 
     65% {
-        color: yellow;
+        color: blue;
     }
 }
 
 #reloadBTN {
-    height: 100px;
-    width: 300px;
+    display: none;
     position: absolute;
-    top: 90%;
+    bottom: -25%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: none;
+    border: 1px solid #131313;
+    border-top-color: #fff;
+    border-left-color: #fff;
+    background: #c0c0c0;
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 30px
 }

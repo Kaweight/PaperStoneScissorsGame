@@ -70,8 +70,10 @@ function displayEndingMessage() {
     if (gameSummary.playerWins >= 3) {
         printMessageWin('WYGRAŁEŚ!');
         showResetButton();
+        hangeDisplayText();
     } else if (gameSummary.AiWins >= 3) {
         printMessageWin('PRZEGRAŁEŚ..');
         showResetButton();
+        hangeDisplayText();
     }
 }
