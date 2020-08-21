@@ -10,6 +10,12 @@ function printMessageWin(win) {
     document.getElementById('lastMessage').appendChild(div);
 }
 
+function showResetButton() {
+    var reloadBTN = document.getElementById('reloadBTN');
+    reloadBTN.style.display = 'block';
+    reload();
+}
+
 function clearMessages() {
     document.getElementById('messages').innerHTML = '';
 }

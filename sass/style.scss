@@ -111,3 +111,13 @@ body {
         color: yellow;
     }
 }
+
+#reloadBTN {
+    height: 100px;
+    width: 300px;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
