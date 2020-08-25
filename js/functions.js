@@ -1,11 +1,11 @@
 function printMessage(msg) {
-    var div = document.createElement('div');
+    const div = document.createElement('div');
     div.innerHTML = msg;
     document.getElementById('messages').appendChild(div);
 }
 
 function printMessageWin(win) {
-    var div = document.createElement('div');
+    const div = document.createElement('div');
     div.innerHTML = win;
     document.getElementById('lastMessage').appendChild(div);
     div.style.border = '1px solid #131313';
@@ -15,12 +15,12 @@ function printMessageWin(win) {
 }
 
 function showResetButton() {
-    var reloadBTN = document.getElementById('reloadBTN');
+    const reloadBTN = document.getElementById('reloadBTN');
     reloadBTN.style.display = 'block';
 }
 
 function hangeDisplayText() {
-    var messages = document.getElementById('messages');
+    const messages = document.getElementById('messages');
     messages.style.display = 'none';
 }
 
